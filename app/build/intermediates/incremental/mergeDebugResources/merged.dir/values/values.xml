@@ -2,6 +2,7 @@
 <resources>
     <string-array name="JSON_URL">
  <item>http://www.pcs.cnu.edu/~kperkins/bikes/</item>
+ <!--http://www.pcs.cnu.edu/~kperkins/bikes/bikes.json-->
  <item>@string/tetonURL</item>
  </string-array>
     <string-array name="JSON_URL_NAME">
@@ -588,7 +589,7 @@
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="tetonNAME">Pair - Teton Software</string>
-    <string name="tetonURL">http://www.tetonsoftware.com/bikes/bikes.json</string>
+    <string name="tetonURL">http://www.tetonsoftware.com/bikes/</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

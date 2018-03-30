@@ -1,5 +1,6 @@
 package com.example.listview;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -8,13 +9,24 @@ import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Spinner;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
 
 	ListView my_listview;
+	JSONHelper jsonHelper;
+	List<BikeData> bikeData= new ArrayList<>();
+	Context cont;
+	private String JSON_URL;
+	private String FULL_URL;
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+
+
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
@@ -23,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
 		//listview that you will operate on
 		my_listview = (ListView)findViewById(R.id.lv);
+		JSON_URL = "@listprefs/JSON_URL";
 
 		//toolbar
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -33,6 +46,21 @@ public class MainActivity extends AppCompatActivity {
 
 		//set the listview onclick listener
 		setupListViewOnClickListener();
+
+
+		if (ConnectivityCheck.isNetworkReachable(cont) || ConnectivityCheck.isWifiReachable(cont)){
+			DownloadTask myTask = new DownloadTask(this);
+
+			myTask.setnameValuePair("company","companyValue");
+			myTask.setnameValuePair("model","modelValue");
+			myTask.setnameValuePair("location","locationValue");
+			myTask.setnameValuePair("price","priceValue");
+			myTask.setnameValuePair("date","dateValue");
+			myTask.setnameValuePair("description","descriptionValue");
+			myTask.setnameValuePair("picture","pictureValue");
+			myTask.setnameValuePair("link","linkValue");
+
+		}
 
 		//TODO call a thread to get the JSON list of bikes
 		//TODO when it returns it should process this data with bindData
@@ -50,6 +78,9 @@ public class MainActivity extends AppCompatActivity {
 	 * @param JSONString  complete string of all bikes
 	 */
 	 void bindData(String JSONString) {
+
+
+	 	bikeData = jsonHelper.parseAll(JSONString);
 
 	}
 

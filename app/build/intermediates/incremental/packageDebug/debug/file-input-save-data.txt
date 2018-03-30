@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Mar 30 15:24:28 EDT 2018
+#Fri Mar 30 16:26:12 EDT 2018
 2.base=C\:\\Users\\cortl\\AndroidStudioProjects\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
 5.set=DEX
 0.path=classes.dex

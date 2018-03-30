@@ -56,7 +56,10 @@ public class JSONHelper {
                 JSONObject rec = jo.getJSONObject(i);
 
                 //first add the mandatory fields
-                BikeData.Builder myDataBuilder = new BikeData.Builder(rec.getString(COMPANY), rec.getString(MODEL), rec.getDouble(PRICE))
+                BikeData.Builder myDataBuilder = new BikeData.Builder(
+                        rec.getString(COMPANY),
+                        rec.getString(MODEL),
+                        rec.getDouble(PRICE))
                         .setLocation(rec.getString(LOCATION))
                         .setDate(rec.getString(DATE))
                         .setDescription(rec.getString(DESCRIPTION))
