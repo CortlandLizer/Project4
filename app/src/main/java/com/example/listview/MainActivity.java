@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 	ListView my_listview;
 	JSONHelper jsonHelper;
 	List<BikeData> bikeData= new ArrayList<>();
-	Context cont;
+	//Context cont;
 	private String JSON_URL;
 	private String FULL_URL;
 
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 		setupListViewOnClickListener();
 
 
-		if (ConnectivityCheck.isNetworkReachable(cont) || ConnectivityCheck.isWifiReachable(cont)){
+		if (ConnectivityCheck.isNetworkReachable(this) || ConnectivityCheck.isWifiReachable(this)){
 			DownloadTask myTask = new DownloadTask(this);
 
 			myTask.setnameValuePair("company","companyValue");

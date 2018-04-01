@@ -1,4 +1,4 @@
-#Fri Mar 30 16:26:12 EDT 2018
+#Fri Mar 30 23:06:31 EDT 2018
 path.1=classes.dex
 path.0=classes.dex
 renamed.5=classes6.dex
@@ -7,12 +7,12 @@ renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.5=C\:\\Users\\cortl\\AndroidStudioProjects\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
-base.4=C\:\\Users\\cortl\\AndroidStudioProjects\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
-base.3=C\:\\Users\\cortl\\AndroidStudioProjects\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
-base.2=C\:\\Users\\cortl\\AndroidStudioProjects\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14
-base.1=C\:\\Users\\cortl\\AndroidStudioProjects\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
-base.0=C\:\\Users\\cortl\\AndroidStudioProjects\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\15
+base.5=/home/matt/Documents/Project4/app/build/intermediates/transforms/dexMerger/debug/13
+base.4=/home/matt/Documents/Project4/app/build/intermediates/transforms/dexMerger/debug/16
+base.3=/home/matt/Documents/Project4/app/build/intermediates/transforms/dexMerger/debug/14
+base.2=/home/matt/Documents/Project4/app/build/intermediates/transforms/dexMerger/debug/17
+base.1=/home/matt/Documents/Project4/app/build/intermediates/transforms/dexMerger/debug/12
+base.0=/home/matt/Documents/Project4/app/build/intermediates/transforms/dexMerger/debug/15
 path.5=classes.dex
 path.4=classes.dex
 path.3=classes.dex
