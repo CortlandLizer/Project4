@@ -18,6 +18,13 @@
             android:paddingRight="10dp" />
     </android.support.v7.widget.Toolbar>
 
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/test"
+        android:textColor="@color/Black"
+        />
+
 
     <ListView
         android:id="@+id/lv"

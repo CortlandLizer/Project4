@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
 	//Context cont;
 	private String JSON_URL;
 	private String FULL_URL;
+	private String test = "http://www.pcs.cnu.edu/~kperkins/bikes/bikes.json";
+	TextView testString;
 
 
 	@Override
@@ -32,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
 		// Change title to indicate sort by
 		setTitle("Sort by:");
+		testString = (TextView)findViewById(R.id.test);
 
 		//listview that you will operate on
 		my_listview = (ListView)findViewById(R.id.lv);
@@ -60,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
 			myTask.setnameValuePair("picture","pictureValue");
 			myTask.setnameValuePair("link","linkValue");
 
+			myTask.execute(test);
+
 		}
 
 		//TODO call a thread to get the JSON list of bikes
@@ -78,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
 	 * @param JSONString  complete string of all bikes
 	 */
 	 void bindData(String JSONString) {
-
+		testString.setText(JSONString);
 
 	 	bikeData = jsonHelper.parseAll(JSONString);
 
