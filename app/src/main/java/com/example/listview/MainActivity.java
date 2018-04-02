@@ -1,11 +1,15 @@
 package com.example.listview;
 
 import android.content.Context;
+import android.location.Location;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -36,8 +40,9 @@ public class MainActivity extends AppCompatActivity {
 		// Change title to indicate sort by
 		setTitle("Sort by:");
 		testString = (TextView)findViewById(R.id.test);
+        spinner = (Spinner)findViewById(R.id.spinner);
 
-		//listview that you will operate on
+        //listview that you will operate on
 		my_listview = (ListView)findViewById(R.id.lv);
 		JSON_URL = "@listprefs/JSON_URL";
 
@@ -84,9 +89,10 @@ public class MainActivity extends AppCompatActivity {
 	 * @param JSONString  complete string of all bikes
 	 */
 	 void bindData(String JSONString) {
-		testString.setText(JSONString);
+		//testString.setText(JSONString);
 
 	 	bikeData = jsonHelper.parseAll(JSONString);
+	 	//testString.setText(bikeData.toString());
 
 	}
 
@@ -99,6 +105,24 @@ public class MainActivity extends AppCompatActivity {
 	 * dontforget to bind the listener to the spinner with setOnItemSelectedListener!
 	 */
 	private void setupSimpleSpinner() {
+
+        String[] name = {"Company", "Model", "Price", "Location"};
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item,name);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                // set in order relative to whatever is clicked depending on position
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
 	}
 	@Override
