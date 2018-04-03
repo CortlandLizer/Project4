@@ -72,13 +72,14 @@ public class MainActivity extends AppCompatActivity {
 			myTask.execute(test);
 
 		}
-
+        // both of these done
 		//TODO call a thread to get the JSON list of bikes
 		//TODO when it returns it should process this data with bindData
 	}
 
 	private void setupListViewOnClickListener() {
 		//TODO you want to call my_listviews setOnItemClickListener with a new instance of android.widget.AdapterView.OnItemClickListener() {
+        
 	}
 
 	/**
@@ -115,7 +116,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 // set in order relative to whatever is clicked depending on position
+                if (position == 0){
+                    // set in order of company
 
+                }
+                else if(position == 1){
+                    // set in order of model
+
+                }
+                else if (position == 2){
+
+                    // set in order of price
+                }
+                else if (position == 3){
+                    // set in order of location
+                }
+                else{
+                    // error
+                }
             }
 
             @Override
