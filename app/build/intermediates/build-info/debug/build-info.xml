@@ -6,13 +6,13 @@
     density="420dpi"
     format="10"
     plugin-version="3.1.0"
-    timestamp="1522686533689"
+    timestamp="1522771812032"
     token="-8325675453045558403"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="192" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
@@ -69,25 +69,34 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1522637403060"
+        ir-eligibility="R_CLASS_CHANGE"
+        timestamp="1522771295223"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/home/matt/Documents/Project4/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1522681095093"
-        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            type="SPLIT" />
         <artifact
             location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1522686533689"
+        timestamp="1522771812032"
         verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
 	private void setupListViewOnClickListener() {
 		//TODO you want to call my_listviews setOnItemClickListener with a new instance of android.widget.AdapterView.OnItemClickListener() {
-        
+
 	}
 
 	/**
@@ -153,6 +153,13 @@ public class MainActivity extends AppCompatActivity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
+            case R.id.action_settings:
+                // take to settings activity
+                break;
+
+            case R.id.refresh:
+                // set back to company layout
+
 
 		default:
 			break;

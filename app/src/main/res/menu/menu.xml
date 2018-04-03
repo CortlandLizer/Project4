@@ -6,6 +6,17 @@
         android:id="@+id/action_settings"
         android:icon="@drawable/action_settings1"
         app:showAsAction="never"
-        android:title="Settings"></item>
+        android:title="Settings"
+        android:orderInCategory="500">
+    </item>
+    <item
+        android:title="Refresh"
+        app:showAsAction="always"
+        android:orderInCategory="400"
+        android:icon="@android:drawable/ic_menu_revert"
+        android:id="@+id/refresh"
+
+    >
+    </item>
 
 </menu>
