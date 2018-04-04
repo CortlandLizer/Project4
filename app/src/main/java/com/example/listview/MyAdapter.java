@@ -60,9 +60,11 @@ public class MyAdapter extends BaseAdapter {
             convertView.setTag(myVH);
         }
 
-        
+        myVH = (ViewHolder)convertView.getTag();
+        //myVH.imageView1.setImage();
+        //mH.model.setText();
 
-        return null;
+        return convertView;
 
     }
     private class ViewHolder{
