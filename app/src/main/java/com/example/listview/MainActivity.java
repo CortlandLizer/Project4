@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 	private String FULL_URL;
 	private String test = "http://www.pcs.cnu.edu/~kperkins/bikes/bikes.json";
 	TextView testString;
+	private MyAdapter myAdapter;
 
 
 	@Override
@@ -72,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
 			myTask.execute(test);
 
 		}
+
+		myAdapter = new MyAdapter(bikeData.size(), this);
         // both of these done
 		//TODO call a thread to get the JSON list of bikes
 		//TODO when it returns it should process this data with bindData
@@ -94,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
 	 	bikeData = jsonHelper.parseAll(JSONString);
 	 	//testString.setText(bikeData.toString());
+
 
 	}
 
@@ -159,11 +163,19 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.refresh:
                 // set back to company layout
-
+				// still need to add part that sets back to company
 
 		default:
 			break;
 		}
 		return true;
+	}
+	public void refresh(){
+		if (ConnectivityCheck.isNetworkReachable(this) || ConnectivityCheck.isWifiReachable(this)){
+			// set back to company layout
+		}
+		else {
+			ConnectivityCheck.isNetworkReachableAlertUserIfNot(this);
+		}
 	}
 }

@@ -6,7 +6,7 @@
     density="420dpi"
     format="10"
     plugin-version="3.1.0"
-    timestamp="1522771812032"
+    timestamp="1522805644048"
     token="-8325675453045558403"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -25,28 +25,34 @@
 
     <build
         build-mode="FULL"
-        timestamp="1522637063522"
+        timestamp="1522803932484"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/matt/Documents/Project4/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+            location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
             location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
             location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
+            location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/matt/Documents/Project4/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
             location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
             location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
@@ -55,13 +61,7 @@
             location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
             location="/home/matt/Documents/Project4/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
@@ -69,34 +69,15 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="R_CLASS_CHANGE"
-        timestamp="1522771295223"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/home/matt/Documents/Project4/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
+        timestamp="1522805623445"
+        verifier="FIELD_ADDED" >
         <artifact
             location="/home/matt/Documents/Project4/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1522771812032"
+        timestamp="1522805644048"
         verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>
