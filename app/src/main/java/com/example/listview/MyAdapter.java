@@ -5,11 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MyAdapter extends BaseAdapter {
     private int sizeOfBikes;
     Context context;
     private LayoutInflater inflater;
+    ViewHolder myVH;
     /**
      * takes in number of bikes to make correct size
      * @param size
@@ -43,10 +46,34 @@ public class MyAdapter extends BaseAdapter {
                 inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             }
 
+            convertView = inflater.inflate(R.layout.listview_row_layout, null);
 
+            myVH = new ViewHolder();
+
+            // might need a few more of these
+            myVH.imageView1 = (ImageView)convertView.findViewById(R.id.imageView1);
+            myVH.model = (TextView)convertView.findViewById(R.id.Model);
+            myVH.price = (TextView)convertView.findViewById(R.id.Price);
+            myVH.description = (TextView)convertView.findViewById(R.id.Description);
+
+
+            convertView.setTag(myVH);
         }
+
+        
 
         return null;
 
     }
+    private class ViewHolder{
+
+        ImageView imageView1;
+        TextView model;
+        TextView price;
+        TextView description;
+
+
+
+    }
 }
+

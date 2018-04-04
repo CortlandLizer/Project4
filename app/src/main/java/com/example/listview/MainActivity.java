@@ -132,9 +132,6 @@ public class MainActivity extends AppCompatActivity {
 
                     // set in order of price
                 }
-                else if (position == 3){
-                    // set in order of location
-                }
                 else{
                     // error
                 }
