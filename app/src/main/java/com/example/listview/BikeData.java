@@ -31,26 +31,27 @@ public class BikeData {
     public String toString() {
         // TODO figure out how to print all bikedata out for dialogs
         // if description
-        if (description.length() > 41){
-            int i = 0;
-            String temp = "";
-            while (i < 42){
-                temp = temp + description.charAt(i);
-
-
-                i++;
-            }
-            String temp2 = "";
-            while (i < description.length() + 1){
-                temp2 = temp2 + description.charAt(i);
-
-            }
-            String finish = temp + "\n" + temp2;
-            return finish;
-        }
-        else   {
+//        if (description.length() > 41){
+//            int i = 0;
+//            String temp = "";
+//            while (i < 42){
+//                temp = temp + description.charAt(i);
+//
+//
+//                i++;
+//            }
+//            String temp2 = "";
+//            while (i < description.length() + 1){
+//                temp2 = temp2 + description.charAt(i);
+//                i++;
+//            }
+//            String finish = temp + "\n" + temp2;
+//            return finish;
+//        }
+//        else   {
         return "";
-        }
+      //  }
+
     }
 
     private BikeData(Builder b) {
@@ -128,26 +129,27 @@ public class BikeData {
         // makes it suitable for chaining
         Builder setDescription(String Description) {
             //TODO manage this
+            this.Description = Description;
             return this;
         }
 
         Builder setLocation(String Location) {
-
+            this.Location = Location;
             return this;
         }
 
         Builder setDate(String Date) {
-
+            this.Date = Date;
             return this;
         }
 
         Builder setPicture(String Picture) {
-
+            this.Picture = Picture;
             return this;
         }
 
         Builder setLink(String Link) {
-
+            this.Link = Link;
             return this;
         }
 
