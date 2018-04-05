@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
 		}
 
-		myAdapter = new MyAdapter(bikeData.size(), this);
+		//myAdapter = new MyAdapter(bikeData.size(), this);
         // both of these done
 		//TODO call a thread to get the JSON list of bikes
 		//TODO when it returns it should process this data with bindData
@@ -96,6 +96,9 @@ public class MainActivity extends AppCompatActivity {
 		//testString.setText(JSONString);
 
 	 	bikeData = jsonHelper.parseAll(JSONString);
+	 	// might be right idk
+
+	 	myAdapter = new MyAdapter(bikeData.size(), this,bikeData);
 	 	//testString.setText(bikeData.toString());
 
 

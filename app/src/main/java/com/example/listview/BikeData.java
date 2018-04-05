@@ -10,6 +10,7 @@ public class BikeData {
     public static final int MODEL = 1;
     public static final int PRICE = 2;
     public static final int LOCATION = 3;
+    
 
     //TODO make all BikeData fields final
 
@@ -24,6 +25,7 @@ public class BikeData {
 
     private BikeData(Builder b) {
         //TODO
+
     }
 
     /**
@@ -50,7 +52,7 @@ public class BikeData {
         }
 
         // the following are setters
-        // notice it returns this bulder
+        // notice it returns this builder
         // makes it suitable for chaining
         Builder setDescription(String Description) {
             //TODO manage this

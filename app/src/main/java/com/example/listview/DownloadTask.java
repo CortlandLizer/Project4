@@ -108,6 +108,7 @@ public class DownloadTask extends AsyncTask<String, Void, String> {
 
             } finally {
                 // close resource no matter what exception occurs
+
                 in.close();
                 connection.disconnect();
             }

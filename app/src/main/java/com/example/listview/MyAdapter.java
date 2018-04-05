@@ -8,18 +8,23 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class MyAdapter extends BaseAdapter {
     private int sizeOfBikes;
     Context context;
     private LayoutInflater inflater;
     ViewHolder myVH;
+    List<BikeData> bikeData;
     /**
+     * added list of bike data
      * takes in number of bikes to make correct size
      * @param size
      */
-    public MyAdapter(int size, Context cxt){
+    public MyAdapter(int size, Context cxt, List<BikeData> bikeData){
         context = cxt;
         sizeOfBikes = size;
+        this.bikeData = bikeData;
     }
 
     @Override
@@ -62,7 +67,7 @@ public class MyAdapter extends BaseAdapter {
 
         myVH = (ViewHolder)convertView.getTag();
         //myVH.imageView1.setImage();
-        //mH.model.setText();
+        //myVH.model.setText();
 
         return convertView;
 

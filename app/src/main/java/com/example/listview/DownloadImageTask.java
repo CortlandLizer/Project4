@@ -3,6 +3,7 @@ package com.example.listview;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.util.Log;
@@ -23,12 +24,13 @@ public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
     private String pictureID;
     private ImageView imageView;
     private Drawable placeholder;
-
-    public DownloadImageTask(String pictureID, ImageView imageView) {
+    MainActivity activity;
+    public DownloadImageTask(String pictureID, ImageView imageView, MainActivity activity1) {
         this.pictureID = pictureID;
         this.imageView = imageView;
         Resources resources = imageView.getContext().getResources();
         this.placeholder = resources.getDrawable(R.drawable.generic);
+        activity = activity1;
     }
 
     @Override
@@ -102,5 +104,11 @@ public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
     @Override
     protected void onPostExecute(Bitmap result) {
         //TODO Your Stuff Here
+        super.onPostExecute(result);
+        if (activity != null){
+            Drawable drawable = new BitmapDrawable(result);
+            imageView.setImageDrawable(drawable);
+
+        }
     }
 }
