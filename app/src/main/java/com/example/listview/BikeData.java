@@ -29,29 +29,12 @@ public class BikeData {
      */
     @Override
     public String toString() {
-        // TODO figure out how to print all bikedata out for dialogs
-        // if description
-//        if (description.length() > 41){
-//            int i = 0;
-//            String temp = "";
-//            while (i < 42){
-//                temp = temp + description.charAt(i);
-//
-//
-//                i++;
-//            }
-//            String temp2 = "";
-//            while (i < description.length() + 1){
-//                temp2 = temp2 + description.charAt(i);
-//                i++;
-//            }
-//            String finish = temp + "\n" + temp2;
-//            return finish;
-//        }
-//        else   {
-        return "";
-      //  }
-
+        String finish = "";
+        String temp = String.valueOf(price);
+        finish = "Company:" + company + "\n" + "Model:" + model + "\n" + "Price:" + "$" + temp + "Location:" + location
+        + "Date Listed:" + date + "Description" + description + "Link" + link;
+        
+        return finish;
     }
 
     private BikeData(Builder b) {

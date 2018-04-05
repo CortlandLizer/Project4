@@ -78,7 +78,7 @@ public class MyAdapter extends BaseAdapter {
         String user = test + bikeData.get(position).getPicture();
 
         DownloadImageTask iTask = new DownloadImageTask(user, myVH.imageView1);
-
+        iTask.execute(user);
 
 
 
