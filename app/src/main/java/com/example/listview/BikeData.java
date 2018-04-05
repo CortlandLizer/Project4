@@ -33,7 +33,7 @@ public class BikeData {
         String temp = String.valueOf(price);
         finish = "Company:" + company + "\n" + "Model:" + model + "\n" + "Price:" + "$" + temp + "Location:" + location
         + "Date Listed:" + date + "Description" + description + "Link" + link;
-        
+
         return finish;
     }
 

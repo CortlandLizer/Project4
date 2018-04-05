@@ -1,8 +1,10 @@
 package com.example.listview;
 
+import android.app.Activity;
 import android.content.Context;
 import android.location.Location;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -10,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -55,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 		setupSimpleSpinner();
 
 		//set the listview onclick listener
-		setupListViewOnClickListener();
+		setupListViewOnClickListener(this);
 
 
 		if (ConnectivityCheck.isNetworkReachable(this) || ConnectivityCheck.isWifiReachable(this)){
@@ -80,7 +83,14 @@ public class MainActivity extends AppCompatActivity {
 		//TODO when it returns it should process this data with bindData
 	}
 
-	private void setupListViewOnClickListener() {
+	private void setupListViewOnClickListener(final Context con) {
+		my_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				AlertDialog.Builder builder = new AlertDialog.Builder(con);
+			}
+		});
+
 		//TODO you want to call my_listviews setOnItemClickListener with a new instance of android.widget.AdapterView.OnItemClickListener() {
 
 	}
