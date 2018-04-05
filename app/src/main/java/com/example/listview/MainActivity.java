@@ -100,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
 
 	 	myAdapter = new MyAdapter(bikeData.size(), this,bikeData);
 	 	//testString.setText(bikeData.toString());
+		 my_listview.setAdapter(myAdapter);
 
 
 	}
