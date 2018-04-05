@@ -16,6 +16,7 @@ public class MyAdapter extends BaseAdapter {
     private LayoutInflater inflater;
     ViewHolder myVH;
     List<BikeData> bikeData;
+    String test = "http://www.pcs.cnu.edu/~kperkins/bikes/";
     /**
      * added list of bike data
      * takes in number of bikes to make correct size
@@ -67,7 +68,20 @@ public class MyAdapter extends BaseAdapter {
 
         myVH = (ViewHolder)convertView.getTag();
         //myVH.imageView1.setImage();
-        //myVH.model.setText();
+        myVH.model.setText(bikeData.get(position).getModel());
+
+        Double use = bikeData.get(position).getPrice();
+        String temp = String.valueOf(use);
+        myVH.price.setText(temp);
+        myVH.description.setText(bikeData.get(position).getDescription().toString());
+
+        String user = test + bikeData.get(position).getPicture();
+
+        DownloadImageTask iTask = new DownloadImageTask(user, myVH.imageView1);
+
+
+
+
 
         return convertView;
 

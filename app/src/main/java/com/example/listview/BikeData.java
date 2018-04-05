@@ -1,5 +1,7 @@
 package com.example.listview;
 
+import android.graphics.Picture;
+
 /**
  * See builderpattern example project for how to do builders
  * they are essential when constructing complicated objects and
@@ -10,8 +12,16 @@ public class BikeData {
     public static final int MODEL = 1;
     public static final int PRICE = 2;
     public static final int LOCATION = 3;
-    
 
+
+    String company;
+    String model;
+    Double price;
+    String description;
+    String location;
+    String date;
+    String picture;
+    String link;
     //TODO make all BikeData fields final
 
     /* (non-Javadoc)
@@ -20,12 +30,73 @@ public class BikeData {
     @Override
     public String toString() {
         // TODO figure out how to print all bikedata out for dialogs
-        return "TODO";
+        // if description
+        if (description.length() > 41){
+            int i = 0;
+            String temp = "";
+            while (i < 42){
+                temp = temp + description.charAt(i);
+
+
+                i++;
+            }
+            String temp2 = "";
+            while (i < description.length() + 1){
+                temp2 = temp2 + description.charAt(i);
+
+            }
+            String finish = temp + "\n" + temp2;
+            return finish;
+        }
+        else   {
+        return "";
+        }
     }
 
     private BikeData(Builder b) {
         //TODO
+        company = b.Company;
+        model = b.Model;
+        price = b.Price;
+        description = b.Description;
+        location = b.Location;
+        date = b.Date;
+        picture = b.Picture;
+        link = b.Link;
 
+
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public String getPicture() {
+        return picture;
     }
 
     /**
@@ -50,6 +121,7 @@ public class BikeData {
             this.Model = Model;
             this.Price = Price;
         }
+
 
         // the following are setters
         // notice it returns this builder

@@ -25,12 +25,12 @@ public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
     private ImageView imageView;
     private Drawable placeholder;
     MainActivity activity;
-    public DownloadImageTask(String pictureID, ImageView imageView, MainActivity activity1) {
+    public DownloadImageTask(String pictureID, ImageView imageView) {
         this.pictureID = pictureID;
         this.imageView = imageView;
         Resources resources = imageView.getContext().getResources();
         this.placeholder = resources.getDrawable(R.drawable.generic);
-        activity = activity1;
+        //activity = activity1;
     }
 
     @Override
@@ -104,11 +104,11 @@ public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
     @Override
     protected void onPostExecute(Bitmap result) {
         //TODO Your Stuff Here
-        super.onPostExecute(result);
-        if (activity != null){
+        //super.onPostExecute(result);
+        //if (activity != null){
             Drawable drawable = new BitmapDrawable(result);
             imageView.setImageDrawable(drawable);
 
-        }
+
     }
 }
