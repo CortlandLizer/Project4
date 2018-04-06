@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
 
 				}
                 else{
-                    // error
+                    // nothing, will never hit
                 }
             }
 
@@ -186,9 +186,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.refresh:
-                // set back to company layout
-				// still need to add part that sets back to company
-
+            	// believe this works right
+				DownloadTask refresh = new DownloadTask(this);
+				refresh.execute(test);
+				spinner.setSelection(0);
 		default:
 			break;
 		}
