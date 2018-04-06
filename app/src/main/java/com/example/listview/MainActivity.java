@@ -20,6 +20,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.FutureTask;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,12 +28,12 @@ public class MainActivity extends AppCompatActivity {
 	ListView my_listview;
 	JSONHelper jsonHelper;
 	List<BikeData> bikeData= new ArrayList<>();
-	//Context cont;
-	private String JSON_URL;
+
+	private final String JSON_URL = "bikes.json";
 	private String FULL_URL;
-	private String test = "http://www.pcs.cnu.edu/~kperkins/bikes/bikes.json";
-	TextView testString;
+
 	private MyAdapter myAdapter;
+	private String[] json;
 
 
 	@Override
@@ -44,13 +45,13 @@ public class MainActivity extends AppCompatActivity {
 
 		// Change title to indicate sort by
 		setTitle("Sort by:");
-		testString = (TextView)findViewById(R.id.test);
+
         spinner = (Spinner)findViewById(R.id.spinner);
 
         //listview that you will operate on
 		my_listview = (ListView)findViewById(R.id.lv);
-		JSON_URL = "@listprefs/JSON_URL";
-
+		json = getResources().getStringArray(R.array.JSON_URL);
+		FULL_URL = json[0] + JSON_URL;
 		//toolbar
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
@@ -74,12 +75,11 @@ public class MainActivity extends AppCompatActivity {
 			myTask.setnameValuePair("picture","pictureValue");
 			myTask.setnameValuePair("link","linkValue");
 
-			myTask.execute(test);
+			myTask.execute(FULL_URL);
 
 		}
 
-		//myAdapter = new MyAdapter(bikeData.size(), this);
-        // both of these done
+
 		//TODO call a thread to get the JSON list of bikes
 		//TODO when it returns it should process this data with bindData
 	}
@@ -188,19 +188,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.refresh:
             	// believe this works right
 				DownloadTask refresh = new DownloadTask(this);
-				refresh.execute(test);
+				refresh.execute(FULL_URL);
 				spinner.setSelection(0);
 		default:
 			break;
 		}
 		return true;
 	}
-	public void refresh(){
-		if (ConnectivityCheck.isNetworkReachable(this) || ConnectivityCheck.isWifiReachable(this)){
-			// set back to company layout
-		}
-		else {
-			ConnectivityCheck.isNetworkReachableAlertUserIfNot(this);
-		}
-	}
+	
 }
