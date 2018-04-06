@@ -10,6 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5145b3b4-b662-41cf-8698-c3bddb04f730" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/listview/ComparatorCompany.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/listview/ComparatorLast.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/listview/ComparatorModel.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/listview/ComparatorPrice.java" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
@@ -44,7 +48,6 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/1/com/example/listview/MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/1/com/example/listview/MainActivity$1.class" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/1/com/example/listview/MainActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/1/com/example/listview/MainActivity$2.class" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/1/com/example/listview/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/1/com/example/listview/MainActivity.class" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/listview/BikeData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/listview/BikeData.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/listview/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/listview/MainActivity.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -97,15 +100,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/listview/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="69" column="37" lean-forward="false" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
+            <state relative-caret-position="180">
+              <caret line="143" column="41" lean-forward="true" selection-start-line="143" selection-start-column="41" selection-end-line="143" selection-end-column="41" />
               <folding>
-                <element signature="e#2666#2934#0" expanded="true" />
-                <element signature="e#2933#2934#0" expanded="true" />
+                <element signature="e#2696#2964#0" expanded="true" />
+                <element signature="e#2963#2964#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComparatorLast.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/listview/ComparatorLast.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="58" lean-forward="false" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComparatorPrice.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/listview/ComparatorPrice.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="52" lean-forward="false" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComparatorCompany.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/listview/ComparatorCompany.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComparatorModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/listview/ComparatorModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -113,7 +156,7 @@
       <file leaf-file-name="JSONHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/listview/JSONHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="972">
+            <state relative-caret-position="470">
               <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding />
             </state>
@@ -132,11 +175,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BikeData.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BikeData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/listview/BikeData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="34" column="91" lean-forward="false" selection-start-line="34" selection-start-column="91" selection-end-line="34" selection-end-column="91" />
+            <state relative-caret-position="428">
+              <caret line="36" column="22" lean-forward="false" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
               <folding>
                 <element signature="e#1369#1370#0" expanded="true" />
                 <element signature="e#1399#1400#0" expanded="true" />
@@ -173,16 +216,6 @@
                 <element signature="e#1020#1021#0" expanded="true" />
                 <element signature="e#1044#1045#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DownloadTask.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/listview/DownloadTask.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2034">
-              <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -2234,8 +2267,12 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/listview_row_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/listview/DownloadImageTask.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/listview/MyAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/listview/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/listview/BikeData.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/listview/ComparatorModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/listview/ComparatorCompany.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/listview/ComparatorPrice.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/listview/ComparatorLast.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/listview/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -2291,7 +2328,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ListActivity_threads_classlab" />
     <property name="device.picker.selection" value="Nexus_5X_API_27" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1522973619662" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1522983354198" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -2554,12 +2591,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/listview/MainActivity.java</url>
-          <line>110</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/listview/DownloadTask.java</url>
           <line>67</line>
           <properties />
@@ -2588,14 +2619,6 @@
           <line>91</line>
           <properties />
           <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/listview/MainActivity.java</url>
-          <line>107</line>
-          <properties class="com.example.listview.MainActivity" method="bindData">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/listview/DownloadTask.java</url>
@@ -2640,8 +2663,8 @@
         <state relative-caret-position="1440">
           <caret line="95" column="41" lean-forward="false" selection-start-line="95" selection-start-column="41" selection-end-line="95" selection-end-column="41" />
           <folding>
-            <element signature="e#2666#2934#0" expanded="true" />
-            <element signature="e#2933#2934#0" expanded="true" />
+            <element signature="e#2696#2964#0" expanded="true" />
+            <element signature="e#2963#2964#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2726,8 +2749,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2666#2934#0" expanded="true" />
-            <element signature="e#2933#2934#0" expanded="true" />
+            <element signature="e#2696#2964#0" expanded="true" />
+            <element signature="e#2963#2964#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2810,8 +2833,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2666#2934#0" expanded="true" />
-            <element signature="e#2933#2934#0" expanded="true" />
+            <element signature="e#2696#2964#0" expanded="true" />
+            <element signature="e#2963#2964#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2829,8 +2852,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2666#2934#0" expanded="true" />
-            <element signature="e#2933#2934#0" expanded="true" />
+            <element signature="e#2696#2964#0" expanded="true" />
+            <element signature="e#2963#2964#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2856,8 +2879,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2666#2934#0" expanded="true" />
-            <element signature="e#2933#2934#0" expanded="true" />
+            <element signature="e#2696#2964#0" expanded="true" />
+            <element signature="e#2963#2964#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3003,14 +3026,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/listview/JSONHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/listview/DownloadImageTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1458">
@@ -3035,21 +3050,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/listview/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="69" column="37" lean-forward="false" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
-          <folding>
-            <element signature="e#2666#2934#0" expanded="true" />
-            <element signature="e#2933#2934#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/listview/BikeData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="34" column="91" lean-forward="false" selection-start-line="34" selection-start-column="91" selection-end-line="34" selection-end-column="91" />
+        <state relative-caret-position="428">
+          <caret line="36" column="22" lean-forward="false" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
           <folding>
             <element signature="e#1369#1370#0" expanded="true" />
             <element signature="e#1399#1400#0" expanded="true" />
@@ -3067,6 +3071,57 @@
             <element signature="e#1773#1774#0" expanded="true" />
             <element signature="e#1807#1808#0" expanded="true" />
             <element signature="e#1837#1838#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/listview/JSONHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/listview/ComparatorModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/listview/ComparatorCompany.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/listview/ComparatorPrice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="52" lean-forward="false" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/listview/ComparatorLast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="58" lean-forward="false" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/listview/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="143" column="41" lean-forward="true" selection-start-line="143" selection-start-column="41" selection-end-line="143" selection-end-column="41" />
+          <folding>
+            <element signature="e#2696#2964#0" expanded="true" />
+            <element signature="e#2963#2964#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -18,6 +18,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -94,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
 			}
 		});
 
-		//TODO you want to call my_listviews setOnItemClickListener with a new instance of android.widget.AdapterView.OnItemClickListener() {
+
 
 	}
 
@@ -109,11 +110,11 @@ public class MainActivity extends AppCompatActivity {
 		//testString.setText(JSONString);
 
 	 	bikeData = jsonHelper.parseAll(JSONString);
-	 	// might be right idk
+
 
 	 	myAdapter = new MyAdapter(bikeData.size(), this,bikeData);
-	 	//testString.setText(bikeData.toString());
-		 my_listview.setAdapter(myAdapter);
+
+	 	my_listview.setAdapter(myAdapter);
 
 
 	}
@@ -139,16 +140,25 @@ public class MainActivity extends AppCompatActivity {
                 // set in order relative to whatever is clicked depending on position
                 if (position == 0){
                     // set in order of company
-
+					Collections.sort(bikeData, new ComparatorCompany());
+                    myAdapter.notifyDataSetChanged();
                 }
                 else if(position == 1){
                     // set in order of model
+					Collections.sort(bikeData, new ComparatorModel());
+					myAdapter.notifyDataSetChanged();
 
                 }
                 else if (position == 2){
-
+					Collections.sort(bikeData, new ComparatorPrice());
+					myAdapter.notifyDataSetChanged();
                     // set in order of price
                 }
+                else if (position == 3){
+					Collections.sort(bikeData, new ComparatorLast());
+					myAdapter.notifyDataSetChanged();
+
+				}
                 else{
                     // error
                 }
