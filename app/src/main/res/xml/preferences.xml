@@ -3,8 +3,8 @@
 
     <ListPreference
         android:key="settings"
-        android:title="Preferences"
-        android:summary="settings used"
+        android:title="JSON bike site"
+        android:summary="Select which site to get JSON data from"
         android:entryValues="@array/JSON_URL"
         android:entries="@array/JSON_URL_NAME"
 

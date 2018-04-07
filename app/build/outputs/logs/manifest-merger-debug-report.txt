@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:2:1-31:12
+ADDED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:2:1-35:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] /home/matt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/db66bac55f3b64605cb8272988f6fd07/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-v4:26.1.0] /home/matt/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/67f655a3992d90ae50bbd8aeedbe96e5/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/matt/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/b398c28c7d75afd4f7bd304bb49dee34/AndroidManifest.xml:17:1-28:12
@@ -14,9 +14,9 @@ MERGED from [com.android.support:support-media-compat:26.1.0] /home/matt/.gradle
 MERGED from [com.android.support:support-core-utils:26.1.0] /home/matt/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/5382f14562962d5b43a34f28ad29888d/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] /home/matt/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/2ea66fead7553cfe9bd6e2ce87fbf69a/AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/matt/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/9bf07581d6573c1016f6ce9b923b9a0f/AndroidManifest.xml:17:1-30:12
-INJECTED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:2:1-35:12
 	package
 		ADDED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:3:5-35
 		INJECTED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml
@@ -40,7 +40,7 @@ ADDED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:8:5-78
 	android:name
 		ADDED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:8:22-76
 application
-ADDED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:10:5-29:19
+ADDED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:10:5-33:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] /home/matt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/db66bac55f3b64605cb8272988f6fd07/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] /home/matt/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/db66bac55f3b64605cb8272988f6fd07/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-v4:26.1.0] /home/matt/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/67f655a3992d90ae50bbd8aeedbe96e5/AndroidManifest.xml:25:5-29:19
@@ -93,6 +93,12 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:26:17-77
 	android:name
 		ADDED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:26:27-74
+activity#com.example.listview.SettingsActivity
+ADDED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:29:9-32:20
+	android:label
+		ADDED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml:29:19-51
 uses-sdk
 INJECTED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/matt/Documents/Project4/app/src/main/AndroidManifest.xml

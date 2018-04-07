@@ -2,11 +2,15 @@ package com.example.listview;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.location.Location;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,6 +20,7 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -34,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
 
 	private MyAdapter myAdapter;
 	private String[] json;
+
+
+	private String urlBad = "http://www.tetonsoftware.com/bikes/" + JSON_URL;
+	private SharedPreferences.OnSharedPreferenceChangeListener listener;
+	String url;
+
+    public static String stringURL = "http://www.tetonsoftware.com/bikes/bikes.json";
+
 
 
 	@Override
@@ -63,7 +76,11 @@ public class MainActivity extends AppCompatActivity {
 		setupListViewOnClickListener(this);
 
 
+
+
+
 		if (ConnectivityCheck.isNetworkReachable(this) || ConnectivityCheck.isWifiReachable(this)){
+
 			DownloadTask myTask = new DownloadTask(this);
 
 			myTask.setnameValuePair("company","companyValue");
@@ -79,6 +96,46 @@ public class MainActivity extends AppCompatActivity {
 
 		}
 
+        final SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        listener = new SharedPreferences.OnSharedPreferenceChangeListener() {
+            public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
+                //url is getting null for some reson
+                //
+                // Toast.makeText(MainActivity.this, "Key=" + key, Toast.LENGTH_SHORT).show();
+                url = pref.getString("settings", "Nothing Found");
+                //if ( url == null){
+                //	url = getResources().getStringArray(R.array.JSON_URL)[0];
+                //Toast.makeText(MainActivity.this, "Key=" + key, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, url, Toast.LENGTH_SHORT).show();
+                String jsonURL = url + "bikes.json";
+
+                stringURL = jsonURL;
+                //getURL();
+
+                FULL_URL = url + JSON_URL;
+                if(url == "http://www.tetonsoftware.com/bikes/"){
+                    Toast.makeText(MainActivity.this, "ERROR when connecting to:" + FULL_URL + "Server returned 404", Toast.LENGTH_SHORT).show();
+                }
+
+                if(!FULL_URL.equals("http://www.pcs.cnu.edu/~kperkins/bikes/bikes.json")){
+                    Log.d("refresh", "BAD");
+                    Toast.makeText(MainActivity.this, "ERROR when connecting to:" + FULL_URL + "Server returned 404", Toast.LENGTH_SHORT).show();
+                    my_listview.setVisibility(View.GONE);
+                }else {
+                    Log.d("refresh", "GOOD");
+
+                    my_listview.setVisibility(View.VISIBLE);
+
+                }
+                //	Log.d("url?", FULL_URL);
+                Log.d("long full url",jsonURL);
+                Log.d("short no json", url  );
+                // Toast.makeText(MainActivity.this, "ERROR when connecting to:" + FULL_URL + "Server returned 404", Toast.LENGTH_SHORT).show();
+
+
+            }
+        };
+        pref.registerOnSharedPreferenceChangeListener(listener);
 
 		//TODO call a thread to get the JSON list of bikes
 		//TODO when it returns it should process this data with bindData
@@ -183,17 +240,29 @@ public class MainActivity extends AppCompatActivity {
 		switch (item.getItemId()) {
             case R.id.action_settings:
                 // take to settings activity
+				Intent intent = new Intent(this, SettingsActivity.class);
+				startActivity(intent);
                 break;
 
             case R.id.refresh:
-            	// believe this works right
-				DownloadTask refresh = new DownloadTask(this);
-				refresh.execute(FULL_URL);
-				spinner.setSelection(0);
+                DownloadTask refresh = new DownloadTask(this);
+
+				//add
+                if(!FULL_URL.equals("http://www.pcs.cnu.edu/~kperkins/bikes/bikes.json")){
+                    //Log.d("refresh", "BAD");
+                    Toast.makeText(MainActivity.this, "ERROR when connecting to:" + FULL_URL + "Server returned 404", Toast.LENGTH_SHORT).show();
+                    //	my_listview.setVisibility(View.GONE);
+                }
+                else {
+
+                    refresh.execute(FULL_URL);
+
+                }
+                spinner.setSelection(0);
 		default:
 			break;
 		}
 		return true;
 	}
-	
+
 }
