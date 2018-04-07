@@ -67,7 +67,7 @@ public class MyAdapter extends BaseAdapter {
         }
 
         myVH = (ViewHolder)convertView.getTag();
-        //myVH.imageView1.setImage();
+
         myVH.model.setText(bikeData.get(position).getModel());
 
         Double use = bikeData.get(position).getPrice();

@@ -99,18 +99,13 @@ public class MainActivity extends AppCompatActivity {
         final SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         listener = new SharedPreferences.OnSharedPreferenceChangeListener() {
             public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
-                //url is getting null for some reson
-                //
-                // Toast.makeText(MainActivity.this, "Key=" + key, Toast.LENGTH_SHORT).show();
+
                 url = pref.getString("settings", "Nothing Found");
-                //if ( url == null){
-                //	url = getResources().getStringArray(R.array.JSON_URL)[0];
-                //Toast.makeText(MainActivity.this, "Key=" + key, Toast.LENGTH_SHORT).show();
-                //Toast.makeText(MainActivity.this, url, Toast.LENGTH_SHORT).show();
-                String jsonURL = url + "bikes.json";
+
+                String jsonURL = url + JSON_URL;
 
                 stringURL = jsonURL;
-                //getURL();
+
 
                 FULL_URL = url + JSON_URL;
                 if(url == "http://www.tetonsoftware.com/bikes/"){
@@ -130,15 +125,14 @@ public class MainActivity extends AppCompatActivity {
                 //	Log.d("url?", FULL_URL);
                 Log.d("long full url",jsonURL);
                 Log.d("short no json", url  );
-                // Toast.makeText(MainActivity.this, "ERROR when connecting to:" + FULL_URL + "Server returned 404", Toast.LENGTH_SHORT).show();
+
 
 
             }
         };
         pref.registerOnSharedPreferenceChangeListener(listener);
 
-		//TODO call a thread to get the JSON list of bikes
-		//TODO when it returns it should process this data with bindData
+
 	}
 
 	private void setupListViewOnClickListener(final Context con) {
@@ -198,7 +192,9 @@ public class MainActivity extends AppCompatActivity {
                 if (position == 0){
                     // set in order of company
 					Collections.sort(bikeData, new ComparatorCompany());
-                    myAdapter.notifyDataSetChanged();
+					if (myAdapter != null) {
+                        myAdapter.notifyDataSetChanged();
+                    }
                 }
                 else if(position == 1){
                     // set in order of model
@@ -249,9 +245,8 @@ public class MainActivity extends AppCompatActivity {
 
 				//add
                 if(!FULL_URL.equals("http://www.pcs.cnu.edu/~kperkins/bikes/bikes.json")){
-                    //Log.d("refresh", "BAD");
                     Toast.makeText(MainActivity.this, "ERROR when connecting to:" + FULL_URL + "Server returned 404", Toast.LENGTH_SHORT).show();
-                    //	my_listview.setVisibility(View.GONE);
+
                 }
                 else {
 
